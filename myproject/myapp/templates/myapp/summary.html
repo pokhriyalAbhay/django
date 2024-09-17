@@ -1,0 +1,19 @@
+<!-- summary_report.html -->
+<table>
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>DPD</th>
+            <th>Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for index, row in summary_report.iterrows %}
+            <tr>
+                <td>{{ row.State }}</td>
+                <td>{{ row.DPD }}</td>
+                <td>{{ row.Count }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

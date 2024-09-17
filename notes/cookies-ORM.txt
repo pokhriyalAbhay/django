@@ -1,0 +1,15 @@
+A cookie is a small piece of text data set by web server that resided on the client mechine
+######## ORM
+object relational mapper(ORM)
+1 ORM which enables application to interact with database such as MySQL , PostgreSQL, Oracle
+2 ORM automatically create a database schema from defined classes or models it genrate SQL from python code for the 
+ particluar database which means developer do not need to write SQL code
+3 it is easier to change the databse if we use ORM hence project becomes more portable
+4 ORM use connector to connect databse with a web application 
+
+APPLICATION -------------------------------> DATABASE 
+class student(models.Model):
+stuid = models.IntegerField()
+stuname = models.CharField(max_length=79)
+stuemail = models.EmailField(max_length=79)
+stupass = models.CharField(max_length=79)

@@ -1,0 +1,3 @@
+geekyshow project mai 2 app bane hain dono app mai templates folder hain dono templates folder mai hmmne ek or folder banaya hain 
+hmmna aasa isliy kiya kyunki agar hmm folder nahi bante ho hmm aage dikkat hoti kynki hmme apni dono app mai same templates folder
+banye hain islye yeh baad mai issue create kar sakta hain terminal confuse ho jayega konsa templates cd kaaru 

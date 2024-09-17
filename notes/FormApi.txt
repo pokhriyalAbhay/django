@@ -1,0 +1,24 @@
+ -------------------Model Form------------------------------------
+ django provides a helper class that lets you create a Form class form a django model this helper classs is called as ModelForm
+ ModelForm is a regular Form which can automatically genrate certai fields
+ the fields that are automatically genrated depend on the content of the meta class and on which fileds have already been degined 
+ declartviely
+
+-------------------------------------------------------------------------------------------------------------------
+steps:-
+create Model class
+create ModelForm class
+-----------------------------------------------------------------------------------------------------------------
+syntax:-
+forms.py
+class ModelFormClassName(forms.ModelForm):
+class meta:
+   model = ModelFormClassName
+   fields = ['fieldname1','fieldname2','fieldname3']
+------------------------------------------------------------------------------------------------------------------
+class Registartion(forms.ModelForm):
+     class meta:
+       model = User
+       fields = ['name','email']
+
+

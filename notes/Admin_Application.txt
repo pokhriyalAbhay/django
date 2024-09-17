@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------------------
+it is bulit in appication provided by django 
+this appication provides admin interface for CRUD operations without sql statement
+it read metadATA FROM your  models to provide a quick , model-centric interface where trusted users can manage content
+on  your site
+Admin appication can be acessed using https//:127.0.0.1:8000/admin
+super user is reuired to login into Admin appication

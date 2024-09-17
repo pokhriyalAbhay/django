@@ -1,0 +1,9 @@
+writing code to get DB data in views.py
+step1
+import your own model class from model.py
+EXAMPLE
+views.py
+from course.models import Student
+def student_info(request):
+stud = Student.object.all()
+return render(request,'course/student.html',{'stu':stud})

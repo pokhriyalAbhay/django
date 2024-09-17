@@ -1,0 +1,3 @@
+Validation of Complete Django Form at once 
+clean()- the clean() method on a field subclass is responsible for running to python() validate() and run_validator()
+in the correct order and propagating their error

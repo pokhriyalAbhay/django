@@ -1,0 +1,34 @@
+Model
+A model is the single , definitive source of information about the your data
+it contains the essentail fields and behaviour of the data you are storing
+genrally each model map to a single database table 
+
+Model Class
+Model class is class which will represent a table in database 
+each model is a python class that subclassess django.db.models.Model
+Each attribute of the model represent a database fields
+ 
+        Create Our Own Model Class
+        model.py
+        class student(models.Model):
+stuid = models.IntegerField()
+stuname = models.CharField(max_length=79)
+stuemail = models.EmailField(max_length=79)
+stupass = models.CharField(max_length=79)
+
+                                    RULES
+
+field name instantiated as class attribute and represent a particular table column name
+field Type is also known as data Type
+a field name cannot be python reserved word
+
+
+Migration 
+Migration are django way of propagating changes you make to your models(adding a field,deleting a model) inot your database schema
+makemigrationa = this is responsible for creating new Migration based on the changes you have made to your models // 
+yeh class model ko sql query mai convert karta hain 
+migrate = this is responsible for applying and unapplying Migration // us sql query ko exceute karne ke liye yeh command run karte hain 
+sqlmigrate = this display the SQL statement for migration 
+showmigration = this lists a project migration and their status
+Display SQL Statement 
+python manage.py sqlmigrate application_name dbfile_name

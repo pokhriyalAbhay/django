@@ -1,0 +1,2 @@
+order_fields(field_order) = this method is used to rearrange the fields any time with a list of field names as in field_order
+by default Form.field_order = None which retains the order in which you define the fields in your form class 

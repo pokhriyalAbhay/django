@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+</head>
+<body>
+    <h1>student page</h1>
+    {% if stu %}
+    {% for st in stu %}
+    <h1>my name is {{st.stuname}}</h1>
+    <h1>my id is {{st.id}} </h1>
+    <h1>my student id is {{st.stuid}}</h1>
+    <h1>my email is {{st.stuemail}}</h1>
+    <h1>my password is {{st.stupass}}</h1>
+    <h1>my comment is {{st.comment}}</h1>
+    {% endfor %}
+    {% else %}
+    <h1>sorry no data is present</h1>
+    {% endif %}
+</body>
+</html>

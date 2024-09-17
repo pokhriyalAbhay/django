@@ -1,0 +1,16 @@
+Custom Path Converters
+create a path Converters class
+-------------------------------------------------------------------------------------------------------------------
+class FourDigitYearConverter:
+regex= '[0-9]{4}'
+def to_python(self,value):
+return int(value)
+def to_url(self,value):
+return '%04d'% value
+-------------------------------------------------------------------------------------------------------------------
+Where
+1 regex is an attribute , as a string
+2. to_python(self,value) method , which handles coverting the matched string into the type that should be passed to the view
+function 
+3. to_url(self,value) method , which handles converting the python type into a string to be used in the URL
+----------------------------------------------------------------------------------------------------------------------

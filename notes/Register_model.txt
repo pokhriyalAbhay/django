@@ -1,0 +1,22 @@
+we are registering our table which has created using model class , to default admin interface
+
+TO Register Follow
+ Open admin.py file which is inside Application 
+ Import your own Model Class created inside Application models.py
+ admin.site.urls(ModelClassName)
+ Example 
+ Open admin.py 
+ form enroll.models import Student
+ admin.site.register(Student)
+
+ __str__() Method
+ the __str__ method is called whenever you call str() on an object to display an object in the django admin site and as the value inserted into template when
+  it display an object thus you should always return a noce , 
+ human-redable representation of the model form the __str__() method 
+ synatax :-
+ def __str__(self):
+ return self.feild.Name 
+
+ Example:-
+ def __str__(self)
+ return self.stuname

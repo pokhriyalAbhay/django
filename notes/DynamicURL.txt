@@ -1,0 +1,16 @@
+------------------------------------------------------------------------------------------------------------------
+Dynamic URL
+urlpattern = 
+[
+    path('student/<my_id>',views.show_details,name="detail"),
+    path('student/<int:my_id>',views.show_details,name="detail"),
+    path('student/<int:my_id>/<int:my_subid',views.show_details,name="detail"),
+]
+-----------------------------------------------------------------------------------------------------------------
+Path Converters
+
+str = Matches any non empty string excluding the path separator ,'/' this is default if a Converter
+isnot included in the expression
+int = Matches zero or any positive integer Return an int
+slug = Mathces any slug string consisting of ASCII letter or number . plus the hyphen and underscore characters
+--------------------------------------------------------------------------------------------------------------------

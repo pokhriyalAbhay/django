@@ -1,0 +1,46 @@
+Django From
+django form functionality can simplify and automate vast portion of work like data prepared for display in a from , render as HTML , edit using a convenient interface returned to the server , validated and cleanup etc and can also 
+do it more securely than most programmers would be able to do in code they worte themselves 
+Django handles three distinct parts of the work involved in from
+preparing and restructing data to make it ready for rendering
+creating HTML form for the data
+receving and processing submitted forms and data from the client 
+--------------------------------------------------------------------------
+Bound and Unbound From
+if it is Bound to a set data it capable of validating the data and rendering the from as HTML with data display in HTML
+if it is Unbound it cannot do validation(no data validate) but it can still render the blank form the HTML
+-------------------------------------------------------------------------------------------
+Creating Django Form Using Form CLass
+to create form we have to create a new file inside application folder lets say file name is form.py. now we can write
+below code inside form.py to create a from 
+-----------------------------------------------------------------------------------------------
+Syntax:
+from django import forms 
+class fromclassname(forms.From)
+label = forms.fieldtype()
+label = forms.fieldtype(label='display_label33') 
+------------------------------------------------------------
+Example:-
+name = forms.CharField()  #here length is not required
+email= forms.EmailField() 
+------------------------------------------------------------
+Display form to User
+Create an object of from class in view.py then pass object to template files
+USe Form object in template file 
+--------------------------------------------------------------------------------
+creating Form object in views.py
+first of all create form obejct inside views.py file then pass the object to template file as dict view.py
+views.py
+form.forms import StudentRegistation
+def showfromdata(request):
+fm = StudentRegistation()
+return render(request,'enroll/userregistration.html'{'form':fm})
+--------------------------------------------------------------------------------------------
+Get object from views.py in template file
+template/enroll/userregistration.html
+<body>
+{{form}}
+</body>
+------------------------------------------------------------------------------------------
+it will not include <button></button> , <form></from> and  <table></table> tag 
+------------------------------------------------------------------------------

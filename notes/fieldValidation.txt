@@ -1,0 +1,24 @@
+is_valid() - this method is used to run validation and return a boolean designating whether the data was valid as true 
+or not as false . this returns True and false
+------------------------------------------------------------------------------------------------------------------
+Get Django Form Data in Terminal
+First of all create form inside forms.py
+from django import forms
+class StudentRegistration(forms.Form):
+    name = forms.CharField()
+    email = forms.EmailField()
+---------------------------------------------------------------------------------------------------------------
+get submitted data in views.py
+views.py
+from .forms import StudentRegistration
+def showdata(request):
+if request.method =='POST':
+ fm = StudentRegistration(request.POST)
+ if(fm.is_valid())
+ print("from validate)
+ print('name',fm.cleaned_data['name'])
+ print('email',fm.cleaned_data['email'])
+ else:
+ fm = StudentRegistration()
+ return render(request,'enroll/user.html',{'form':fm})
+ 
